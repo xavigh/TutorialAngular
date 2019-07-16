@@ -1,32 +1,24 @@
 import { Component } from "@angular/core";
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
+
 export class AppComponent {
-  title: string = "project004";
-  valor1: number;
-  valor2: number;
-  valor3: number;
-  resultado: string;
-  constructor() {
-    this.valor1 = this.retornarAleatorio();
-    this.valor2 = this.retornarAleatorio();
-    this.valor3 = this.retornarAleatorio();
-  }
+  
+  mensaje = "";
+  
+  constructor(private title: Title) {}
 
-  retornarAleatorio() {
-    return Math.trunc(Math.random() * 6) + 1;
+  ngOnInit() {
+      this.title.setTitle('project5- crono');
   }
-
-  tirar() {
-    this.valor1 = this.retornarAleatorio();
-    this.valor2 = this.retornarAleatorio();
-    this.valor3 = this.retornarAleatorio();
-    if (this.valor1 == this.valor2 && this.valor1 == this.valor3)
-      this.resultado = "you are a winner";
-    else this.resultado = "try to match numbers";
+  
+  actualizar(t){
+    this.mensaje = t + "(se actualiza cada 10 segundos)";
   }
+  
 }

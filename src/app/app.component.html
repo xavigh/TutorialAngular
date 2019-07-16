@@ -1,9 +1,6 @@
 <div style="text-align:center">
-  <app-dado valor="{{valor1}}"></app-dado>
-  <app-dado valor="{{valor2}}"></app-dado>
-  <app-dado valor="{{valor3}}"></app-dado>
-  <hr>
-  <button (click)="tirar()">Tirar</button>  
-  <hr>
-  <p>Resultado:    {{resultado}}</p>
+  <h1>Prueba de la componente cronometro</h1>
+  <app-cronometro inicio="0" (multiplo10)="actualizar($event)"></app-cronometro>
+  <h2>Evento</h2>
+  <h3>{{mensaje}}</h3>
 </div>
