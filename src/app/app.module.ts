@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { SelectornumericoComponent } from './selectornumerico/selectornumerico.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SelectornumericoComponent
  
     
   ],
