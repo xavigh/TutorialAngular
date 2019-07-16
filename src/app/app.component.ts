@@ -1,6 +1,5 @@
-import { Component, ViewChild } from "@angular/core";
+import { Component } from "@angular/core";
 import { Title } from '@angular/platform-browser';
-import { SelectornumericoComponent } from './selectornumerico/selectornumerico.component';
 
 @Component({
   selector: "app-root",
@@ -10,7 +9,7 @@ import { SelectornumericoComponent } from './selectornumerico/selectornumerico.c
 
 export class AppComponent {
   
- 
+  mensaje = "";
   
   constructor(private title: Title) {}
 
@@ -18,14 +17,8 @@ export class AppComponent {
       this.title.setTitle('project5- crono');
   }
   
-  @ViewChild('selector1', null) selector1: SelectornumericoComponent;
-  @ViewChild('selector2', null) selector2: SelectornumericoComponent;  
-
-  fijarSelector1(valor:number) {
-    this.selector1.fijar(valor);
+  actualizar(t){
+    this.mensaje = t + "(se actualiza cada 10 segundos)";
   }
-
-  fijarSelector2(valor:number) {
-    this.selector2.fijar(valor);
-  }
+  
 }
