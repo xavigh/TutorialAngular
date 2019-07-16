@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ListadoanunciosComponent } from './listadoanuncios/listadoanuncios.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListadoanunciosComponent
  
     
   ],
