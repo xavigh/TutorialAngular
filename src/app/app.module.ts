@@ -10,7 +10,7 @@ import { DadoComponent } from './dado/dado.component';
     DadoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule   
   ],
   providers: [],
   bootstrap: [AppComponent]
