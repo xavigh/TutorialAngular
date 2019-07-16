@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = 'project004';
+  title: string = "project004";
   valor1: number;
   valor2: number;
   valor3: number;
@@ -17,19 +17,16 @@ export class AppComponent {
     this.valor3 = this.retornarAleatorio();
   }
 
-  retornarAleatorio(){
-    return Math.trunc(Math.random() * 6) +1;
+  retornarAleatorio() {
+    return Math.trunc(Math.random() * 6) + 1;
   }
 
   tirar() {
     this.valor1 = this.retornarAleatorio();
     this.valor2 = this.retornarAleatorio();
     this.valor3 = this.retornarAleatorio();
-    if (this.valor1==this.valor2 && this.valor1==this.valor3)    
-      this.resultado='you are a winner';
-    else
-      this.resultado='try to match numbers';
+    if (this.valor1 == this.valor2 && this.valor1 == this.valor3)
+      this.resultado = "you are a winner";
+    else this.resultado = "try to match numbers";
   }
 }
-
-
