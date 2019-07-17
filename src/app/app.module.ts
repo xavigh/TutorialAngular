@@ -3,20 +3,22 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ElementosModule } from './elementos/elementos.module'
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent    
  
     
   ],
   imports: [
-    BrowserModule   
+    BrowserModule,
+    ElementosModule   
   ],
   providers: [
-    Title
+  Title
   ],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Title } from '@angular/platform-browser';
+
 
 @Component({
   selector: "app-root",
@@ -9,16 +9,7 @@ import { Title } from '@angular/platform-browser';
 
 export class AppComponent {
   
-  mensaje = "";
-  
-  constructor(private title: Title) {}
 
-  ngOnInit() {
-      this.title.setTitle('project5- crono');
-  }
-  
-  actualizar(t){
-    this.mensaje = t + "(se actualiza cada 10 segundos)";
-  }
-  
+
+
 }
