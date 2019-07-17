@@ -1,24 +1,33 @@
 import { Component } from "@angular/core";
-import { Title } from '@angular/platform-browser';
+
+import { HttpClient } from '@angular/common/http';  
+
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
   
-  mensaje = "";
+  export class AppComponent {
+    private articulos = null;
   
-  constructor(private title: Title) {}
+
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
-      this.title.setTitle('project5- crono');
+    this.http.get("http://scratchya.com.ar/vue/datos.php").subscribe(
+        result => {
+          this.articulos = result;
+        },
+        error => {
+          console.log('problemas');
+        }
+      );
   }
   
-  actualizar(t){
-    this.mensaje = t + "(se actualiza cada 10 segundos)";
-  }
+  
+ 
   
 }
